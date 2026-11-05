@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eptq"
+version = "0.1.0"
+description = "E8 Lattice Post-Training Quantization for LLMs"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "hmpark"}
+]
+dependencies = [
+    "torch>=2.0",
+    "transformers>=4.30",
+    "tqdm",
+    "datasets",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "isort",
+]
+
+[tool.setuptools]
+packages = ["eptq", "eptq.kernels"]
+package-dir = {"eptq" = ".", "eptq.kernels" = "kernels"}
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 100

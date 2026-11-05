@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Build artifacts
+build/
+dist/
+*.so
+*.pyd
+
+# Editor / OS
+.DS_Store
+.vscode/
+
+# Calibration data cache
+calib_*.pt
