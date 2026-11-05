@@ -1,9 +1,9 @@
 """Quick correctness + speed test for the Triton e8d4 kernel vs CUDA kernel."""
-import sys
+import os, sys
 import time
 import torch
 
-sys.path.insert(0, "/home/hmpark/eptq_new")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from eptq.kernels.triton_e8d4 import e8d4_triton_forward
 from eptq.kernels import e8d4_forward
 

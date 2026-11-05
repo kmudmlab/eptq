@@ -1,10 +1,10 @@
 """Diagnose which kernel (CUDA or Triton) produces NaN for M=512, N=4096."""
-import sys
+import os, sys
 import torch
 import triton
 import triton.language as tl
 
-sys.path.insert(0, "/home/hmpark/eptq_new")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from eptq.kernels import e8d4_forward
 
 device = "cuda"

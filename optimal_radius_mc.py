@@ -35,7 +35,7 @@ def main():
     parser.add_argument("--r_step", type=float, default=0.05)
     parser.add_argument("--device", type=str, default="cuda")
     parser.add_argument("--out_csv", type=str,
-                        default="/home/hmpark/eptq_new/results/optimal_radius_mc.csv")
+                        default="./results/optimal_radius_mc.csv")
     args = parser.parse_args()
 
     torch.manual_seed(args.seed)

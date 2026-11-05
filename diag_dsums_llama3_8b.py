@@ -228,7 +228,7 @@ def plot_comparison(dsums_with, dsums_without, knees_with, knees_without,
 def main():
     model_name = "meta-llama/Meta-Llama-3-8B"
     device = "cuda"
-    out_dir = Path("/home/hmpark/eptq_new/results/plots")
+    out_dir = Path("./results/plots")
     out_dir.mkdir(parents=True, exist_ok=True)
 
     # Reuse cached D_sums if available

@@ -52,7 +52,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", type=str, default="meta-llama/Llama-2-7b-hf")
     parser.add_argument("--out_csv", type=str,
-                        default="/home/hmpark/eptq_new/results/codebook_radius_diag.csv")
+                        default="./results/codebook_radius_diag.csv")
     args = parser.parse_args()
 
     print(f"Loading {args.model}...")

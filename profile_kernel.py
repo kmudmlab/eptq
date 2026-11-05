@@ -3,7 +3,7 @@
 import torch
 from eptq.kernels.patch import load_quantized_model
 
-QUANTIZED_DIR = "/home/hmpark/eptq_new/quantized/e8_d4/opt-125m"
+QUANTIZED_DIR = "./quantized/e8_d4/opt-125m"
 
 model, tokenizer = load_quantized_model(QUANTIZED_DIR, device="cuda")
 

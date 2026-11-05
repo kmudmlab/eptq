@@ -9,8 +9,8 @@ from eptq.kernels.patch import load_quantized_model
 device = "cuda"
 
 for quant_dir, qtype in [
-    ("/home/hmpark/eptq_new/quantized/e8_lattice/opt-125m", "e8_lattice"),
-    ("/home/hmpark/eptq_new/quantized/e8_d4/opt-125m",      "e8_d4"),
+    ("./quantized/e8_lattice/opt-125m", "e8_lattice"),
+    ("./quantized/e8_d4/opt-125m",      "e8_d4"),
 ]:
     print(f"\n=== {qtype} ===")
     model, tokenizer = load_quantized_model(quant_dir, device=device)
